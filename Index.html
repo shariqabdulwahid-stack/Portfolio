@@ -1,67 +1,41 @@
 <!DOCTYPE html>
-<!-- Declares the document type and version of HTML -->
-<html>
+<html lang="en">
 <head>
-  <!-- Sets character encoding and viewport for responsive design -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shariq Abdul-Wahid | Portfolio</title>
-
-  <!-- Links external CSS stylesheet for styling -->
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shariq Abdul-Wahid – Portfolio</title>
+    
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 769px)" />
 </head>
-<body>
 
-  <!-- Header section with logo and navigation -->
-  <header class="header">
-    <div class="logo">
-      <!-- Your name and title displayed prominently -->
-      <h1>Shariq Abdul-Wahid</h1>
-      <p>Networking & IT Security Student</p>
-    </div>
+<body class="home-page">
+    <header class="header">
+        <div class="brand"><strong>Shariq Abdul-Wahid</strong></div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Navigation menu linking to other pages -->
-    <nav class="nav">
-      <ul class="clearfix">
-        <!-- Navigation links styled with .element class -->
-        <li class="element"><a href="about.html">About Me</a></li>
-        <li class="element"><a href="projects.html">Projects</a></li>
-        <li class="element"><a href="contact.html">Contact Me</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+        <section class="intro-section">
+            <h1>Hey, I'm Shariq.</h1>
+            <h2>Aspiring Cybersecurity & IT Professional</h2>
+            <a href="about.html" class="learn-button">Learn More</a>
+        </section>
+    </main>
 
-  <!-- Main content of the homepage -->
-  <main>
-    <!-- About section introducing yourself -->
-    <section id="about">
-      <h2>Welcome to My Portfolio</h2>
-      <!-- First paragraph styled with #first ID -->
-      <p id="first">My name is Shariq Abdul-Wahid, a second-year student at Ontario Tech University specializing in Networking & IT Security.</p>
-      <!-- Additional summary paragraphs styled with .second class -->
-      <p class="second">This site showcases my academic projects, technical skills, and professional experience in IT and customer service.</p>
-      <p class="second">Explore my journey, connect with me, and discover how I combine creativity, problem-solving, and cybersecurity to make meaningful impacts.</p>
-    </section>
-
-    <!-- Skills section listing core competencies -->
-    <section id="skills">
-      <h2>Core Skills</h2>
-      <ul class="clearfix">
-        <!-- Each skill styled with .element and .skill classes -->
-        <li class="element skill">Cybersecurity & Networking</li>
-        <li class="element skill">Microsoft Office Suite</li>
-        <li class="element skill">Python & Linux Fundamentals</li>
-        <li class="element skill">Customer Service & Communication</li>
-        <li class="element skill">Team Leadership & Collaboration</li>
-      </ul>
-    </section>
-  </main>
-
-  <!-- Footer section with contact info and copyright -->
-  <footer id="customfooter">
-    <!-- Your name is bolded using <strong> for emphasis -->
-    <p><strong>&copy; 2025 Shariq Abdul-Wahid</strong></p>
-  </footer>
-
+    <footer id="customfooter">
+        <p>
+            <strong>&copy; 2025 Shariq Abdul-Wahid | </strong> 
+            <strong>Email: </strong><a href="mailto:shariq.abdulwahid@gmail.com">shariq.abdulwahid@gmail.com</a>
+        </p>
+    </footer>
 </body>
 </html>

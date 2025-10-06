@@ -1,0 +1,111 @@
+/* desktop.css - Layout for Tablet/Laptop/Desktop Devices (Min-width 481px and 769px)
+   -- This file uses Media Queries to apply fluid, multi-column layouts using FLOATS and PERCENTAGES,
+   -- strictly avoiding Flexbox as required by the assignment.
+*/
+
+/* --- 2a. Media Query 1: Tablet Viewport (481px to 768px) ---
+   -- The layout transitions from a single column (100% width) to a two-column layout.
+*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Header: Switches to a centered horizontal layout */
+    .brand, nav {
+        display: block;
+        text-align: center;
+    }
+    .nav-list li {
+        display: inline-block; /* Changes nav from vertical stack to horizontal row */
+        margin: 0 10px;
+    }
+
+    /* ABOUT SUMMARY: Fluid two-column layout using floats */
+    .about-text {
+        width: 60%; /* Text column takes 60% width */
+        float: left;
+        padding-right: 20px;
+    }
+    .about-image {
+        width: 35%; /* Image column takes 35% width (5% spacing) */
+        float: right;
+        margin-top: 20px;
+    }
+    .about-image img {
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* PROJECTS & SKILLS: Fluid two-column grid */
+    .project-item, .skills-list li {
+        width: 48%; /* Fluid width for two columns */
+        float: left;
+        margin-right: 4%; /* Space between columns */
+        box-sizing: border-box;
+    }
+    /* Critical: Clears the float margin on the rightmost column item */
+    .project-item:nth-child(2n), .skills-list li:nth-child(2n) {
+        margin-right: 0; 
+    }
+}
+
+
+/* --- 2a. Media Query 2: Desktop/Laptop Viewport (769px and up) ---
+   -- This defines the final, wide-screen fluid layout.
+*/
+@media screen and (min-width: 769px) {
+
+    /* HEADER: Classic float-based desktop navigation */
+    .header {
+        padding: 60px;
+        text-align: left;
+    }
+    .brand {
+        float: left; /* Brand moves to the left */
+        margin-bottom: 0;
+    }
+    nav {
+        float: right; /* Navigation moves to the right */
+    }
+    .nav-list li {
+        display: inline-block; /* Ensures horizontal navigation */
+        margin-left: 20px;
+    }
+
+
+    /* ABOUT SUMMARY: Wide-screen fluid layout (65% text / 30% image) */
+    .about-text {
+        width: 65%; /* Fluid width: Text takes up two-thirds */
+        float: left;
+        padding-right: 4%; 
+    }
+
+    .about-image {
+        width: 30%; /* Fluid width: Image takes up one-third (5% gap) */
+        float: right;
+        padding-top: 60px;
+        margin-top: 40px;
+    }
+
+    /* DETAILS SECTION: Two-column 48% fluid layout */
+    .details-left,
+    .details-right {
+        width: 48%; /* Each column is 48% width (4% gap between them) */
+        float: left;
+        box-sizing: border-box;
+        margin-right: 4%; /* Space between the two columns */
+    }
+
+    .details-right {
+        margin-right: 0; /* Remove right margin on the last floated item */
+    }
+
+    /* PROJECTS & SKILLS: Two-column 48% fluid grid */
+    .project-item, .skills-list li {
+        width: 48%;
+        float: left;
+        margin-right: 4%;
+        box-sizing: border-box;
+    }
+    /* Critical: Removes the right margin on the last item in a row (every second item) */
+    .project-item:nth-child(2n), .skills-list li:nth-child(2n) {
+        margin-right: 0;
+    }
+}

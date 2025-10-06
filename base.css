@@ -1,0 +1,99 @@
+/* base.css - Universal Styles (Colors, Fonts, Gradients)
+   -- This file contains all non-layout specific styles that apply to all viewports.
+   -- It ensures color and typography consistency and includes the required linear/angle gradients.
+*/
+
+/* --- 2c. Color Scheme (Chosen Adobe Color Palette) --- */
+/* Defined using CSS variables for easy maintenance and consistency (explained in README) */
+:root {
+    --primary-blue: #0D47A1;    /* Deep Blue (Headings, Main BG) */
+    --secondary-blue: #1976D2;  /* Vibrant Blue (Buttons, Accents) */
+    --light-blue: #E3F2FD;      /* Very Light Blue (Base background) */
+    --text-dark: #212121;       /* Dark Text */
+    --text-light: #FFFFFF;      /* White Text */
+    --accent-light: #64B5F6;    /* Lighter blue for card BG/Hover */
+}
+
+/* Base Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* --- 2b. Required Linear Gradient --- */
+/* Applied to the Home page body (index.html) as required */
+body.home-page {
+    /* Transitions from a light blue to a slightly darker light blue */
+    background: linear-gradient(to bottom, var(--light-blue), #90CAF9);
+}
+
+.header {
+    background-color: var(--primary-blue);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Common Text and Link Styles */
+h1, h2, h3 { color: var(--primary-blue); }
+a { text-decoration: none; }
+a:hover { opacity: 0.8; }
+
+/* Semantic Section Common Properties */
+section {
+    padding: 40px 20px;
+    max-width: 1200px; /* Limits max width on very large screens */
+    margin: auto;
+    /* Important: 'overflow: auto;' ensures that any floated content inside the section 
+       is contained, preventing the section from collapsing on desktop viewports. */
+    overflow: auto; 
+}
+
+/* --- 2b. Required Angle Linear Gradient --- */
+/* Applied to the Submit button on the Contact Me page */
+button[type="submit"] {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    
+    /* Angle Linear Gradient: Creates a repeating striped effect at 45 degrees */
+    background-image: repeating-linear-gradient(
+        45deg, 
+        #2c89cc,                
+        var(--primary-blue) 10%, 
+        #1565C0 20%              
+    );
+    transition: background-color 0.3s ease;
+}
+
+/* Form Input Styling (Key Fluid Design Principle) */
+form input,
+form textarea {
+    /* The 100% width is essential for Fluid Design, ensuring inputs stretch across the container */
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* box-sizing: border-box is crucial: it ensures padding/border are included 
+       in the 100% width calculation, preventing overflow and horizontal scrollbars. */
+    box-sizing: border-box; 
+}
+
+/* 1e. Footer Styling (Assignment Requirement) */
+#customfooter {
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+}
+#customfooter a {
+    color: var(--light-blue);
+}

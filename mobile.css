@@ -1,0 +1,131 @@
+/* mobile.css - Layout for Mobile Devices (Default: Max-width 768px)
+   -- This file establishes the single-column, stacked layout using 100% widths.
+   -- This is the required base for Fluid Design.
+*/
+
+/* --- Header Layout (Stacked for Mobile) --- */
+.header {
+    background-color: var(--primary-blue);
+    padding: 20px;
+    text-align: center;
+}
+
+.brand {
+    margin-bottom: 15px;
+    display: block; /* Ensures brand is on its own line */
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    display: block; /* Makes each link stack vertically (standard mobile nav) */
+    margin-bottom: 10px;
+}
+
+.nav-list a {
+    display: block; /* Makes the link clickable across the full width */
+    background-color: var(--secondary-blue);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* --- All Multi-column Sections (Stacked) --- */
+
+/* About Summary, Details, and Projects: Layout for Mobile */
+.about-text,
+.about-image,
+.details-left,
+.details-right,
+.project-item {
+    width: 100%; /* Fluid Design Principle: Full width stack */
+    padding: 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.about-image img {
+    /* Fluid image sizing for mobile. 60% of container width, centered. */
+    width: 60%; 
+    display: block;
+    margin: 0 auto; 
+    border-radius: 20px;
+}
+
+.details-left,
+.details-right {
+    padding: 30px;
+    background: var(--accent-light);
+}
+
+.skills-list li {
+    display: block; /* Ensures skills stack vertically */
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: var(--secondary-blue);
+    color: var(--text-light);
+}
+
+
+/* Utility Class for Floats */
+/* This is crucial for *containing* floated elements used in the desktop view. 
+   It ensures that container elements in the HTML (e.g., .about-container) maintain 
+   their height even when their children are floated. */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* mobile.css - Layout for Mobile Devices (Default: Max-width 768px)
+   ... (rest of the file remains the same) ...
+*/
+
+/* --- FIX FOR HOME PAGE HEADING ALIGNMENT --- */
+/* --- Home Page Heading Centering Fix (Final Attempt) --- */
+
+.intro-section {
+    /* 1. Sets up the container for centering */
+    text-align: center; 
+    padding: 80px 20px; 
+    /* Ensures the section occupies the full width to center against */
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.intro-section h1, 
+.intro-section h2 {
+    /* 2. Remove default browser margins that might be causing alignment issues */
+    margin-left: 0;
+    margin-right: 0;
+    /* 3. Ensure the element is a block that can be centered */
+    display: block;
+    /* 4. Explicitly center the text content */
+    text-align: center; 
+    /* Optional: If still not working, force the element to center as a block */
+    margin: 5px auto; 
+    max-width: 100%;
+}
+
+.intro-section h1 {
+    font-size: 2.5em; 
+}
+
+.intro-section h2 {
+    font-size: 1.5em; 
+    color: var(--text-dark);
+}
+
+.learn-button {
+    background-color: var(--secondary-blue);
+    color: var(--text-light) !important; 
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+    /* The parent's text-align: center centers this inline-block element */
+    display: inline-block; 
+}
