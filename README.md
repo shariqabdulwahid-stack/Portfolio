@@ -5,7 +5,7 @@ Course: INFR3120 – Web and Scripting Programming
 
 1. Project Access
 You can view the live site and the source code here:
-Live GitHub Pages Site: https://shariqabdulwahid.github.io/portfolio-site
+Live GitHub Pages Site: [https://shariqabdulwahid.github.io/portfolio-site](https://shariqabdulwahid-stack.github.io/Portfolio/)
 GitHub Repository: [https://github.com/shariqabdulwahid/portfolio-site](https://github.com/shariqabdulwahid-stack/Portfolio)
 
 2. Responsive Design and Structure
