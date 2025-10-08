@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set character encoding and responsive viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shariq Abdul-Wahid – Contact Me</title>
@@ -23,19 +24,23 @@
     </header>
 
     <main>
+        <!-- Contact form section -->
         <section>
             <h2>Let's Connect</h2>
             <p>If you'd like to collaborate, ask a question, or just say hello, feel free to reach out using the form below:</p>
-            <form>
-                <p><label>Your Name: <input type="text" required /></label></p>
-                <p><label>Your Email: <input type="email" required /></label></p>
-                <p><label>Your Phone Number: <input type="tel" pattern="[0-9]{10}" required /></label></p>
-                <p><label>Comments: <textarea required></textarea></label></p>
+            <!-- Form submission handled by FormSubmit service -->
+            <form action="https://formsubmit.co/shariq.abdulwahid@gmail.com" method="POST">
+                <p><label>Your Name: <input type="text" name="name" required /></label></p>
+                <p><label>Your Email: <input type="email" name="email" required /></label></p>
+                <p><label>Your Phone Number: <input type="tel" name="phone" pattern="[0-9]{10}" required /></label></p>
+                <p><label>Comments: <textarea name="comments" required></textarea></label></p>
                 <p><button type="submit">Submit</button></p>
             </form>
+
         </section>
     </main>
 
+    <!-- Footer with contact info -->
     <footer id="customfooter">
         <p><strong>&copy; 2025 Shariq Abdul-Wahid | </strong> <strong>Email: </strong><a href="mailto:shariq.abdulwahid@gmail.com">shariq.abdulwahid@gmail.com</a></p>
     </footer>
